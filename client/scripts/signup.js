@@ -6,7 +6,8 @@ const loader = document.getElementById('loader');
 const notifyBox = document.getElementById('notify-box');
 const cancelBtn = document.getElementById('cancel-btn');
 // const url = 'http://localhost:3000/';
-const url = 'https://pacific-stream-32452.herokuapp.com:30863/';
+// const url = 'https://pacific-stream-32452.herokuapp.com:30863/';
+const url = 'https://localhost:30863';
 
 loader.style.display = 'none';
 notifyBox.style.display = 'none';
