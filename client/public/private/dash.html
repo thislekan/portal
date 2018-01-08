@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Points || Student Dashboard</title>
+
+    <link rel="stylesheet" href="../../styles/dash.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <article>
+        <nav>
+            <div>
+                <a href="../../index.html">Home</a>
+                <a href="../registered.html">Registerd</a>
+                <button id="logout">Log Out</button>
+            </div>
+        </nav>
+        <section class="dash">
+            <section>
+                <div class="profile-info">
+                    <img src="../../images/nodepoints.png" alt="Profile Picture" id="avatar">
+                    <p id="fullname">Surname Firstname</p>
+                </div>
+                <div class="dash-btn">
+                    <p>Profile<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="profile.html">Complete Profile</a></li>
+                    </ul>
+                </div>
+                <div class="dash-btn">
+                    <p>Courses<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="courses.html">Add Course</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <div class="name">
+                        <input type="text" name="name" id="name" placeholder="Lastname Firstname">
+                        <button id="name-btn">Edit Name</button>
+                    </div>
+                    <div class="user-info">
+                        <img src="../../images/nodepoints.png" alt="User's Image" id="user-img">
+                        <div>
+                            <p id="user-name">Username Surname</p>
+                            <p id="user-fac">Faculty</p>
+                            <p id="user-dept">Department</p>
+                            <p id="user-level">Level</p>
+                        </div>
+                    </div>
+                    <div class="table-div">
+                        <table>
+                            <caption>Courses Registered</caption>
+                            <tr>
+                                <th>S/No.</th>
+                                <th>Course</th>
+                                <th>Credit Unit</th>
+                                <th>Status</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="course">GENS101</td>
+                                <td>2</td>
+                                <td>Registered</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="course">GENS103</td>
+                                <td>2</td>
+                                <td>Registered</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="course">GENS107</td>
+                                <td>2</td>
+                                <td>Registered</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+
+    <script src="../../scripts/dash.js"></script>
+</body>
+
+</html>

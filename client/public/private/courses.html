@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Points || Register Courses</title>
+
+    <link rel="stylesheet" href="../../styles/dash.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner spinner__1"></div>
+    </div>
+    <article>
+        <nav>
+            <div>
+                <a href="../../index.html">Home</a>
+                <a href="../registered.html">Registerd</a>
+                <button id="logout">Log Out</button>
+            </div>
+        </nav>
+        <section class="dash">
+            <section>
+                <div class="profile-info">
+                    <img src="../../images/nodepoints.png" alt="Profile Picture" id="avatar">
+                    <p id="fullname">Surname Firstname</p>
+                </div>
+                <div class="dash-btn">
+                    <p>Dashboard<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="dash.html">Return to Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="dash-btn">
+                    <p>Profile<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="profile.html">Complete Profile</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div class="course-select">
+                    <div class="select-tab">
+                        <select name="faculty" id="fac-select">
+                            <option value="">Choose from a faculty</option>
+                            <option value="Science">Science</option>
+                            <option value="Engineering">Enginnering</option>
+                            <option value="Social Sciences">Social Sciences</option>
+                            <option value="Art">Art</option>
+                        </select>
+                        <select name="department" id="dept-select">
+                            <option value="">Choose from a department</option>
+                        </select>
+                        <select name="course" id="course-select">
+                            <option value="">Select a course</option>
+                        </select>
+                        <select name="course-type" id="type-select">
+                            <option value="">Select Core or Elective</option>
+                            <option value="Core">Core</option>
+                            <option value="Elective">Elective</option>
+                        </select>
+                    </div>
+                    <div class="add-course">
+                        <button id="add-btn">Add Course</button>
+                    </div>
+                </div>
+                <div class="table-div">
+                    <div id="notify-box">
+                        <p>Your Data has been successfully sent to the server</p>
+                        <button id="cancel-btn">OK</button>
+                    </div>
+                    <table>
+                        <caption>Courses Registered</caption>
+                        <tr>
+                            <th>S/No.</th>
+                            <th>Course</th>
+                            <th>Course Type</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td class="serial-no">1</td>
+                            <td class="course">GENS101</td>
+                            <td>Core</td>
+                            <td>Registered</td>
+                        </tr>
+                        <tr>
+                            <td class="serial-no">2</td>
+                            <td class="course">GENS103</td>
+                            <td>Core</td>
+                            <td>Registered</td>
+                        </tr>
+                        <tr>
+                            <td class="serial-no">3</td>
+                            <td class="course">GENS107</td>
+                            <td>Core</td>
+                            <td>Registered</td>
+                        </tr>
+                    </table>
+                    <div class="submit">
+                        <button id="submit-btn">Submit Course Form</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+
+    <script src="../../scripts/courses.js"></script>
+</body>
+
+</html>

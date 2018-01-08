@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Points || Edit Profile</title>
+
+    <link rel="stylesheet" href="../../styles/dash.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <article>
+        <nav>
+            <div>
+                <a href="../../index.html">Home</a>
+                <a href="../registered.html">Registerd</a>
+                <a href="">Log Out</a>
+            </div>
+        </nav>
+        <section class="dash">
+            <section>
+                <div class="profile-info">
+                    <img src="../../images/nodepoints.png" alt="Profile Picture">
+                    <p id="fullname">Surname Firstname</p>
+                </div>
+                <div class="dash-btn">
+                    <p>Dashboard<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="dash.html">Return to Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="dash-btn">
+                    <p>Courses<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="courses.html">Add Course</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <div class="msg-box" style="position:relative">
+                        <div id="notify-box">
+                            <p>Your Data has been successfully sent to the server</p>
+                            <button id="cancel-btn">OK</button>
+                        </div>
+                        <h3>Your Image Upload was successful</h3>
+                        <p>Click the OK button to return to the dashboard</p>
+                        <button id="ok-btn">OK</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+
+    <script src="../../scripts/notify.js"></script>
+</body>
+
+</html>

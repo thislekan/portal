@@ -1,0 +1,128 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Points || Edit Profile</title>
+
+    <link rel="stylesheet" href="../../styles/dash.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner spinner__1"></div>
+    </div>
+    <article>
+        <nav>
+            <div>
+                <a href="../../index.html">Home</a>
+                <a href="../registered.html">Registerd</a>
+                <button id="logout">Log Out</button>
+            </div>
+        </nav>
+        <section class="dash">
+            <section>
+                <div class="profile-info">
+                    <img src="" alt="Profile Picture" id="avatar">
+                    <p id="fullname">Surname Firstname</p>
+                </div>
+                <div class="dash-btn">
+                    <p>Dashboard<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="dash.html">Return to Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="dash-btn">
+                    <p>Courses<i class="fa fa-plus-circle"></i></p>
+                    <ul>
+                        <li><a href="courses.html">Add Course</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h1>Update Profile</h1>
+                    <div class="img-section">
+                        <div class="preview">
+                            <img src="" alt="image preview" id="thumb">
+                        </div>
+                        <form action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data" id="form" name="imageUpload" target="_self">
+                            <div class="image">
+                                <input type="file" name="image" id="image" placeholder="Please select an image not greater than 1.5MB" accept="image/*" onchange="openFile(event)">
+                                <button id="img-btn">Upload Image</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="complete-profile">
+                        <select name="gender" id="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <select name="faculty" id="faculty" required>
+                            <option value="">Select Faculty</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Science">Science</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Social Sciences">Social Sciences</option>
+                        </select>
+                        <select name="department" id="department" required>
+                            <option value="">Select Department</option>
+                            <option value="English">English</option>
+                            <option value="Biochemistry">Biochemistry</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Mass Communication">Mass Communication</option>
+                            <option value="Medicine">Medicine</option>
+                        </select>
+                        <input type="text" name="level" id="level" placeholder="Level. eg: 100L or 400L">
+                        <input type="text" name="regNo" id="regNo" placeholder="Reg No. eg: U17EE1003" required>
+                        <div class="table-div">
+                            <div id="notify-box">
+                                <p>Your Data has been successfully sent to the server</p>
+                                <button id="cancel-btn">OK</button>
+                            </div>
+                            <table>
+                                <caption>General Courses</caption>
+                                <tr>
+                                    <th>S/No.</th>
+                                    <th>Course</th>
+                                    <th>Credit Unit</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="course">GENS101</td>
+                                    <td>2</td>
+                                    <td>Registered</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="course">GENS103</td>
+                                    <td>2</td>
+                                    <td>Registered</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="course">GENS107</td>
+                                    <td>2</td>
+                                    <td>Registered</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="submit">
+                            <button id="submit-btn">Update Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </article>
+
+    <script src="../../scripts/profile.js"></script>
+</body>
+
+</html>

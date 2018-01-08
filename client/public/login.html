@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Points || Log in</title>
+
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner spinner__1"></div>
+    </div>
+    <article>
+        <nav>
+            <div>
+                <img src="../images/nodepoints.svg" alt="logo">
+            </div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="signup.html">Sign up</a>
+                <a href="">Log out</a>
+                <a href="">Contact Us</a>
+            </div>
+        </nav>
+        <section>
+            <div>
+                <h3>Please fill all fields</h3>
+            </div>
+            <div class="form-body login">
+                <div id="notify-box">
+                    <p>Your Data has been successfully sent to the server</p>
+                    <button id="cancel-btn">OK</button>
+                </div>
+                <div class="email">
+                    <label for="email">
+                        <span class="fa fa-envelope"></span>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="example@nodepoints.com">
+                </div>
+                <div class="password">
+                    <label for="password">
+                        <span class="fa fa-lock"></span>
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </div>
+                <div>
+                    <button id="log-in">Log in</button>
+                </div>
+            </div>
+            <div class="divert">
+                <p>Forgot Password? <a href="">Click here</a></p>
+            </div>
+        </section>
+    </article>
+
+    <script src="../scripts/login.js"></script>
+</body>
+
+</html>

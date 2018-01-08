@@ -1,0 +1,456 @@
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-size: 1.6rem;
+    font-family: 'Quicksand';
+    color: #3b3b3b;
+}
+
+header {
+    height: 100vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../images/drawing.jpg');
+    transition: all ease 0.3s;
+}
+
+article {
+    margin-top: 2rem;
+    transition: all ease 0.3s;
+}
+
+.shift {
+    transform: translateX(-85%);
+}
+
+.header-body {
+    height: 100vh;
+    background-color: rgba(146, 23, 187, 0.65);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 6px 9px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+.content__text {
+    background: royalblue;
+}
+
+.content__text2 {
+    background-color: rgba(27, 30, 42, 0.85);
+}
+
+.flash__box {
+    height: 17rem;
+    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.flash__news h3 {
+    color: white;
+}
+
+.slide {
+    padding: .5rem;
+    display: none;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.nav-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#nav-btn {
+    transition: ease 0.3s;
+}
+
+.fixed-nav {
+    position: fixed;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    color: white;
+    z-index: 1;
+    background-color: #241b35;
+    transition: all ease 0.3s;
+}
+
+.fixed-nav>ul {
+    height: 100%;
+}
+
+.fixed-nav>ul>li {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.fixed-nav>ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.trigger ul {
+    list-style: none;
+    padding: 0;
+}
+
+.trigger a {
+    color: #b3a4a4;
+}
+
+.grid,
+.grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    height: 10rem
+}
+
+.nav-top img {
+    height: 7rem;
+}
+
+.nav-top span {
+    margin-right: 1rem;
+}
+
+.slider-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid gainsboro;
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: #A339C4;
+}
+
+.sect-banner,
+.fac-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sect-banner img,
+.fac-banner img {
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.sect-text,
+.fac-text {
+    padding-left: 2rem;
+}
+
+.rector {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex: 1;
+    height: 25rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.students-alumni,
+.news-events {
+    background-color: #241b35;
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.students-alumni h3,
+.news-events h3,
+.students-alumni a {
+    color: white;
+}
+
+.rector img {
+    height: 20rem;
+}
+
+.rector span {
+    font-size: 1.6rem;
+    font-family: 'Serif';
+}
+
+section {
+    margin-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+footer {
+    background-color: #313030;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+.back-color {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.dropdown-background {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    /* background-color: rgba(0, 0, 0, 0.65); */
+    background-color: white;
+    border: 1px solid white;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 7px 13px rgba(0, 0, 0, 0.2);
+    width: 10rem;
+    height: 10rem;
+    transform-origin: 50% 0%;
+    transition: all 0.4s, opacity 0.2s, translate 0.3s;
+}
+
+.open {
+    opacity: 1;
+}
+
+@media screen and (min-device-width: 700px) {
+    .navbar {
+        display: grid;
+        grid-template-columns: auto 80%;
+        position: fixed;
+        width: 100%;
+        align-items: center;
+        transition: all ease 1s;
+    }
+    .nav-top {
+        position: unset;
+        display: unset;
+    }
+    #nav-btn {
+        display: none;
+    }
+    .fixed-nav {
+        position: unset;
+        height: unset;
+        width: unset;
+        background-color: unset;
+    }
+    .fixed-nav>ul {
+        height: unset;
+        display: flex;
+        justify-content: space-between;
+        /* position: relative; */
+    }
+    .dropdown {
+        opacity: 0;
+        position: absolute;
+        top: 5rem;
+        width: max-content;
+        padding: 0rem;
+        list-style: none;
+        border-radius: .5rem;
+        will-change: opacity;
+    }
+    .trigger {
+        position: relative;
+    }
+    .trigger a {
+        color: initial;
+    }
+    .trigger-enter .dropdown {
+        display: block;
+    }
+    .trigger-enter .grid {
+        display: flex;
+        justify-content: space-around;
+    }
+    .trigger-enter-active .dropdown {
+        opacity: 1;
+        padding: 1rem;
+    }
+    .trigger>div {
+        cursor: pointer;
+    }
+    .grid {
+        display: flex;
+        flex-direction: row;
+        width: 40rem;
+    }
+    .grid div {
+        display: flex;
+        flex-direction: column;
+    }
+    .header-body {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    .content__text2 {
+        display: grid;
+        grid-template-columns: 45% auto;
+        align-items: center;
+        grid-gap: 2rem;
+    }
+    .__story {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .flash__news {
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .flash__box {
+        height: 20rem;
+    }
+    article {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    footer {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    footer ul {
+        padding: 0;
+        list-style: none;
+    }
+    .contact,
+    .faculty,
+    .students-alumni {
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+    .contact>div,
+    .students-alumni>div,
+    .mission>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mission div {
+        align-items: center;
+    }
+    .faculties,
+    .news-events>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    .news-events>div,
+    .mission>div {
+        grid-gap: 2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .faculties ul,
+    .students-alumni ul {
+        list-style: none;
+        padding: 0;
+        padding-left: 1.5rem;
+    }
+    .news-events h1 {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .students-alumni,
+    .news-events {
+        border-radius: 1rem;
+        box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.65);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .students-alumni li {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-device-width: 1000px) {
+    header {
+        font-size: 2rem;
+    }
+    .header-body {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    article {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+    .faculties {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    section {
+        min-height: 50vh;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    footer {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+
+@media screen and (min-device-width: 1280px) {
+    .header-body {
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+}

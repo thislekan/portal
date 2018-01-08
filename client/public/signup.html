@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node Points || Sign Up</title>
+
+    <link rel="stylesheet" href="../styles/signup.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="spinner spinner__1"></div>
+    </div>
+    <article>
+        <nav>
+            <div>
+                <img src="../images/nodepoints.svg" alt="logo">
+            </div>
+            <div>
+                <a href="../index.html">Home</a>
+                <a href="login.html">Log in</a>
+                <a href="">Log out</a>
+                <a href="">Contact Us</a>
+            </div>
+        </nav>
+        <section>
+            <div>
+                <h3>Please fill all fields</h3>
+            </div>
+            <div class="form-body">
+                <div id="notify-box">
+                    <p>Your Data has been successfully sent to the server</p>
+                    <button id="cancel-btn">OK</button>
+                </div>
+                <div class="name">
+                    <label for="name">
+                        <span class="fa fa-user"></span>
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Surname  Firstname">
+                </div>
+                <div class="email">
+                    <label for="email">
+                        <span class="fa fa-envelope"></span>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="example@nodepoints.com">
+                </div>
+                <div class="password">
+                    <label for="password">
+                        <span class="fa fa-lock"></span>
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                </div>
+                <div>
+                    <button id="sign-up">Sign Up</button>
+                </div>
+            </div>
+            <div class="divert">
+                <p>Already have an account? <a href="">Log in</a></p>
+            </div>
+        </section>
+    </article>
+
+    <script src="../scripts/signup.js"></script>
+</body>
+
+</html>
