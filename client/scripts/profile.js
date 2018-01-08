@@ -1,5 +1,5 @@
 // const url = "http://localhost:3000/";
-const url = 'https://pacific-stream-32452.herokuapp.com:30863/';
+const url = 'https://pacific-stream-32452.herokuapp.com';
 const loader = document.getElementById('loader');
 const notifyBox = document.getElementById('notify-box')
 const cancelBtn = document.getElementById('cancel-btn');
