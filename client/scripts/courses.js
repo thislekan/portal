@@ -1,4 +1,5 @@
-const url = "http://localhost:3000/";
+// const url = "http://localhost:3000/";
+const url = 'https://pacific-stream-32452.herokuapp.com:30863';
 const fullname = document.getElementById('fullname');
 const avatar = document.getElementById('avatar');
 const faculty = document.getElementById('fac-select');

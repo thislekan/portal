@@ -12,7 +12,8 @@ const displayDept = document.getElementById('user-dept');
 const displayLevel = document.getElementById('user-level');
 const displayImg = document.getElementById('user-img');
 const logOut = document.getElementById('logout');
-const url = 'http://localhost:3000/';
+// const url = 'http://localhost:3000/';
+const url = 'https://pacific-stream-32452.herokuapp.com:30863';
 
 function hanldeResponse(res) {
     return res.json()
