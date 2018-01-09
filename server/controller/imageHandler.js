@@ -18,7 +18,7 @@ const newupload = multer({
 
 const uploadImage = function(req, res) {
     let id = req.params.id;
-    let imageUrl = req.file.url;
+    let imageUrl = req.file.secure_url;
 
     User.findOneAndUpdate({
         _id: ObjectID(id)
