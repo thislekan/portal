@@ -144,11 +144,8 @@ logOut.addEventListener('click', () => {
         .catch(e => console.log(e));
 });
 
-// window.onload = () => {
-//     // if (avatar.src === `${url}public/private/null`) {
-//     //     location.reload();
-//     // }
-//     console.log(avatar.src);
-// }
-
-console.log(avatar.src);
+window.onload = () => {
+    if (avatar.src === `${url}public/private/null`) {
+        location.reload();
+    }
+}
