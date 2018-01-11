@@ -40,7 +40,11 @@ const login = (route, userData) => {
                 let error = Object.assign({}, res, {
                     status: res.status,
                     statusText: 'incorrect email or password'
-                })
+                });
+                let message = notifyBox.querySelector('p');
+                message.innerHTML = error.statusText;
+                loader.style.display = 'none';
+                notifyBox.style.display = 'block';
                 return Promise.reject(error);
             }
         })
