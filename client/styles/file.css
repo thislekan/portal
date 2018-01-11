@@ -31,8 +31,8 @@ article {
 
 .header-body {
     height: 100vh;
-    background-color: rgba(146, 23, 187, 0.65);
-    color: white;
+    /* background-color: rgba(146, 23, 187, 0.65); */
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -245,6 +245,7 @@ footer a {
 
 .back-color {
     background-color: rgba(0, 0, 0, 0.65);
+    color: white;
 }
 
 .dropdown-background {
