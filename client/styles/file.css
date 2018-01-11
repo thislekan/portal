@@ -6,7 +6,7 @@ html {
 body {
     margin: 0;
     font-size: 1.6rem;
-    font-family: 'Quicksand';
+    font-family: 'Nunito', sans-serif;
     color: #3b3b3b;
 }
 
@@ -184,12 +184,6 @@ h3 {
     margin-right: 1rem;
 }
 
-
-/* .sect-text,
-.fac-text {
-    padding-left: 2rem;
-} */
-
 .rector {
     display: flex;
     text-align: center;
@@ -309,6 +303,7 @@ footer a {
         list-style: none;
         border-radius: .5rem;
         will-change: opacity;
+        transition: ease .2s;
     }
     .trigger {
         position: relative;
@@ -458,5 +453,5 @@ h4,
 h5,
 h6,
 {
-    font-family: 'Open sans';
+    font-family: 'Open Sans', sans-serif;
 }
