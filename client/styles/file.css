@@ -8,6 +8,7 @@ body {
     font-size: 1.6rem;
     font-family: 'Nunito', sans-serif;
     color: #3b3b3b;
+    background: #f5f5f5;
 }
 
 header {
@@ -196,17 +197,18 @@ h3 {
 
 .students-alumni,
 .news-events {
-    background-color: #241b35;
-    color: white;
+    /* background-color: #241b35;
+    color: white; */
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-.students-alumni h3,
+
+/* .students-alumni h3,
 .news-events h3,
 .students-alumni a {
     color: white;
-}
+} */
 
 .rector img {
     height: 15rem;
@@ -388,6 +390,7 @@ footer a {
     .mission div {
         align-items: center;
     }
+    .faculties,
     .news-events>div {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -416,15 +419,28 @@ footer a {
     }
     .students-alumni,
     .news-events {
-        border-radius: 1rem;
+        /* border-radius: 1rem;
         box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.65);
         padding-left: 1rem;
-        padding-right: 1rem;
+        padding-right: 1rem; */
         padding-top: 0;
         padding-bottom: 0;
     }
     .students-alumni li {
         margin-top: 1rem;
+    }
+    .fac-sect {
+        background-color: white;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border: 1px solid white;
+        border-radius: .5rem;
+        transition: linear .2s;
+    }
+    .fac-sect:hover {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     }
 }
 
