@@ -63,7 +63,7 @@ function handleEnter() {
 
 function handleLeave() {
     const dropdown = this.querySelector('.dropdown');
-    dropdown.style.visibility = 'collapse';
+    dropdown.style.visibility = 'hidden';
     this.classList.remove('trigger-enter', 'trigger-enter-active');
     background.classList.remove('open');
 }
