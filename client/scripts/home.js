@@ -40,16 +40,18 @@ navBtn.addEventListener('click', () => {
 });
 
 function handleEnter() {
+    const dropdown = this.querySelector('.dropdown');
+    dropdown.style.visibility = 'visible';
+
     this.classList.add('trigger-enter');
     setTimeout(() => this.classList.add('trigger-enter-active'), 250);
     background.classList.add('open');
 
-    const dropdown = this.querySelector('.dropdown');
+
     const dropdownCoords = dropdown.getBoundingClientRect();
-    console.log(dropdownCoords);
 
     const coords = {
-        height: dropdownCoords.height + 20,
+        height: dropdownCoords.height + 15,
         width: dropdownCoords.width + 20,
         top: dropdownCoords.top,
         left: dropdownCoords.left
@@ -60,6 +62,8 @@ function handleEnter() {
 }
 
 function handleLeave() {
+    const dropdown = this.querySelector('.dropdown');
+    dropdown.style.visibility = 'collapse';
     this.classList.remove('trigger-enter', 'trigger-enter-active');
     background.classList.remove('open');
 }

@@ -10,7 +10,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    font-family: 'Quicksand';
+    font-family: 'Nunito';
     overflow-y: hidden;
 }
 
@@ -65,7 +65,7 @@ input {
     border-radius: .5rem;
     border: 1px solid #696464;
     width: 100%;
-    font-family: 'Quicksand';
+    font-family: 'Nunito';
     text-align: center;
     font-weight: bold;
 }
@@ -90,7 +90,7 @@ button {
     border-radius: .5rem;
     border: 1px solid #81f413;
     background: #81f413;
-    font-family: 'Quicksand';
+    font-family: 'Nunito';
     font-weight: bold;
     font-size: 1.6rem;
     cursor: pointer;
@@ -207,7 +207,7 @@ p a {
     font-weight: bold;
     width: 15rem;
     box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.2);
-    font-family: 'Quicksand';
+    font-family: 'Nunito';
     outline: none;
     cursor: pointer;
 }

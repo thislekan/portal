@@ -7,8 +7,8 @@ body {
     margin: 0;
     height: 100vh;
     overflow-y: hidden;
-    font-size: 1.8rem;
-    font-family: 'Quicksand';
+    font-size: 1.6rem;
+    font-family: 'Nunito';
 }
 
 section {
@@ -34,7 +34,7 @@ input {
     border: 1px solid grey;
     border-radius: .5rem;
     font-size: 1.8rem;
-    font-family: 'Quicksand';
+    font-family: 'Nunito';
     font-weight: bold;
     margin-top: 1.5rem;
     text-align: center;
@@ -48,7 +48,7 @@ input {
 button {
     height: 3.5rem;
     width: 15rem;
-    font-family: 'Quicksand';
+    font-family: 'Nunito';
     font-weight: bold;
     background: royalblue;
     border: 1px solid royalblue;
