@@ -386,6 +386,7 @@ footer a {
     .mission>div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1.5rem;
     }
     .mission div {
         align-items: center;
@@ -429,7 +430,8 @@ footer a {
     .students-alumni li {
         margin-top: 1rem;
     }
-    .fac-sect {
+    .fac-sect,
+    .students-alumni>div>div {
         background-color: white;
         padding-left: 1.2rem;
         padding-right: 1.2rem;
@@ -439,7 +441,8 @@ footer a {
         border-radius: .5rem;
         transition: linear .2s;
     }
-    .fac-sect:hover {
+    .fac-sect:hover,
+    .students-alumni>div>div:hover {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
     }
 }
@@ -448,8 +451,14 @@ footer a {
     .header-body,
     footer,
     article {
-        padding-left: 15rem;
-        padding-right: 15rem;
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+    .news-events .sect-text p {
+        background-color: #FAFAFA;
+        padding: 1rem;
+        border-radius: .5rem;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
     }
     .faculties {
         grid-template-columns: 1fr 1fr 1fr;
