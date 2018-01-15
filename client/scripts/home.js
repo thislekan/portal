@@ -3,6 +3,7 @@ let navBtn = document.getElementById('nav-btn');
 let header = document.querySelector('header');
 let menu = document.getElementById('fixed-nav');
 let article = document.querySelector('article');
+let footer = document.querySelector('footer');
 let navbar = document.getElementById('navbar');
 let triggers = document.querySelectorAll('.trigger');
 let background = document.querySelector('.dropdown-background');
@@ -30,11 +31,13 @@ navBtn.addEventListener('click', () => {
         menu.style.left = '100%';
         header.classList.remove('shift');
         article.classList.remove('shift');
+        footer.classList.remove('shift');
         navBtn.style.color = 'initial';
     } else {
         menu.style.left = '15%';
         header.classList.add('shift');
         article.classList.add('shift');
+        footer.classList.add('shift');
         navBtn.style.color = 'white';
     }
 });

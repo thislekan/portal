@@ -13,7 +13,6 @@ body {
 
 header {
     height: 100vh;
-    /* text-align: center; */
     background-size: cover;
     background-position: center;
     background-image: url('../images/drawing.jpg');
@@ -25,20 +24,35 @@ article {
     transition: all ease 0.3s;
 }
 
+h1 {
+    text-align: center;
+}
+
+h3 {
+    color: #A339C4;
+}
+
 .shift {
     transform: translateX(-85%);
 }
 
 .header-body {
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
-    /* text-align: center; */
     padding-left: 1rem;
     padding-right: 1rem;
     color: white;
+}
+
+.content__text h1 {
+    text-align: left;
+}
+
+.flash__news h3 {
+    text-align: center;
 }
 
 .content__text2 {
@@ -57,11 +71,6 @@ article {
     display: flex;
     align-items: center;
 }
-
-
-/* .flash__news h3 {
-    color: white;
-} */
 
 .slide {
     padding: .5rem;
@@ -160,14 +169,6 @@ img {
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    text-align: center;
-}
-
-h3 {
-    color: #A339C4;
-}
-
 .sect-banner,
 .fac-banner {
     display: flex;
@@ -193,18 +194,9 @@ h3 {
 
 .students-alumni,
 .news-events {
-    /* background-color: #241b35;
-    color: white; */
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-
-
-/* .students-alumni h3,
-.news-events h3,
-.students-alumni a {
-    color: white;
-} */
 
 .rector img {
     height: 15rem;
@@ -349,16 +341,9 @@ footer a {
     .content__text {
         padding: 1rem;
     }
-    .__story {
+    .flash__news {
         padding-left: 1rem;
         padding-right: 1rem;
-    }
-    .flash__news {
-        height: 25rem;
-        /* display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center; */
     }
     .flash__box {
         height: 20rem;
@@ -423,10 +408,6 @@ footer a {
     }
     .students-alumni,
     .news-events {
-        /* border-radius: 1rem;
-        box-shadow: 6px 7px 10px rgba(0, 0, 0, 0.65);
-        padding-left: 1rem;
-        padding-right: 1rem; */
         padding-top: 0;
         padding-bottom: 0;
     }
