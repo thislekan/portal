@@ -13,7 +13,7 @@ body {
 
 header {
     height: 100vh;
-    text-align: center;
+    /* text-align: center; */
     background-size: cover;
     background-position: center;
     background-image: url('../images/drawing.jpg');
@@ -40,20 +40,23 @@ article {
     padding-right: 1rem;
 }
 
-.header__content {
+
+/* .header__content {
     color: white;
     display: flex;
     flex-direction: column;
     box-shadow: 6px 9px 7px 0px rgba(0, 0, 0, 0.3);
-}
+} */
 
-.content__text {
+
+/* .content__text {
     background: royalblue;
-}
+} */
 
-.content__text2 {
+
+/* .content__text2 {
     background-color: rgba(27, 30, 42, 0.85);
-}
+} */
 
 .flash__box {
     height: 17rem;
@@ -63,9 +66,10 @@ article {
     align-items: center;
 }
 
-.flash__news h3 {
+
+/* .flash__news h3 {
     color: white;
-}
+} */
 
 .slide {
     padding: .5rem;
@@ -164,9 +168,10 @@ img {
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
+
+/* h1 {
     text-align: center;
-}
+} */
 
 h3 {
     color: #A339C4;
@@ -346,12 +351,12 @@ footer a {
         padding-left: 3rem;
         padding-right: 3rem;
     }
-    .content__text2 {
+    /* .content__text2 {
         display: grid;
         grid-template-columns: 45% auto;
         align-items: center;
         grid-gap: 2rem;
-    }
+    } */
     .__story {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -467,7 +472,7 @@ footer a {
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
         min-height: 12rem;
         margin-right: 1.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     .faculties {
         grid-template-columns: 1fr 1fr 1fr;
