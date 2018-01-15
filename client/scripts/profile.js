@@ -81,7 +81,7 @@ fetch(`${url}users/me`, {
             sessionStorage.setItem('imageUrl', 'https://res.cloudinary.com/thislekan/image/upload/v1514755522/ALC2.0 Development/user-male-black-shape.svg');
         }
     })
-    .catch(e => console.log(e));
+    .catch(e => alert(e));
 
 const createStudentData = data => {
     fetch(`${url}data`, {
@@ -96,9 +96,8 @@ const createStudentData = data => {
         .then(data => {
             loader.style.display = 'none';
             notifyBox.style.display = 'block';
-            // console.log(data);
         })
-        .catch(error => console.log(error));
+        .catch(error => alert(error));
 }
 
 avatar.src = sessionStorage.getItem('imageUrl');
@@ -141,7 +140,7 @@ logOut.addEventListener('click', () => {
             sessionStorage.clear();
             location.href = '../login.html';
         })
-        .catch(e => console.log(e));
+        .catch(e => alert(e));
 });
 
 window.onload = () => {
