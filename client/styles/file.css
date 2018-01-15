@@ -31,13 +31,14 @@ article {
 
 .header-body {
     height: 100vh;
-    /* background-color: rgba(146, 23, 187, 0.65); */
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    /* text-align: center; */
     padding-left: 1rem;
     padding-right: 1rem;
+    color: white;
 }
 
 
@@ -53,10 +54,12 @@ article {
     background: royalblue;
 } */
 
-
-/* .content__text2 {
-    background-color: rgba(27, 30, 42, 0.85);
-} */
+.content__text2 {
+    color: initial;
+    background: white;
+    border: 1px solid white;
+    border-radius: 1rem;
+}
 
 .flash__box {
     height: 17rem;
@@ -351,12 +354,14 @@ footer a {
         padding-left: 3rem;
         padding-right: 3rem;
     }
-    /* .content__text2 {
+    .header__content {
         display: grid;
-        grid-template-columns: 45% auto;
-        align-items: center;
-        grid-gap: 2rem;
-    } */
+        grid-template-columns: auto 40%;
+        grid-column-gap: 3rem;
+    }
+    .content__text {
+        padding: 1rem;
+    }
     .__story {
         padding-left: 1rem;
         padding-right: 1rem;
