@@ -207,6 +207,12 @@ img {
     font-family: 'Serif';
 }
 
+.faculties ul,
+.students-alumni ul {
+    list-style: none;
+    padding: 0;
+}
+
 section {
     margin-bottom: 5rem;
     padding-left: 1rem;
@@ -220,6 +226,7 @@ footer {
     padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    transition: all ease 0.3s;
 }
 
 footer ul {
@@ -397,7 +404,6 @@ footer a {
     }
     .faculties ul,
     .students-alumni ul {
-        list-style: none;
         padding: 0;
     }
     .news-events h1 {
