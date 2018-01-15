@@ -270,7 +270,7 @@ footer a {
 @media screen and (min-device-width: 700px) {
     .navbar {
         display: grid;
-        grid-template-columns: auto 80%;
+        grid-template-columns: auto 85%;
         position: fixed;
         width: 100%;
         align-items: center;
@@ -476,10 +476,13 @@ footer a {
         padding-top: .5rem;
         padding-bottom: .5rem;
     }
-    .nav-top,
+    .nav-top {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
     .fixed-nav {
-        padding-left: 3.5rem;
-        padding-right: 3.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 }
 
