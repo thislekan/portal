@@ -1,5 +1,4 @@
 module.exports = (app) => {
-    // const fs = require('fs');
     const cors = require('cors');
     const corsOptions = { exposedHeaders: ['x-auth'] };
     const {

@@ -58,4 +58,4 @@ btn.addEventListener('click', () => {
 
 cancelBtn.addEventListener('click', () => {
     notifyBox.style.display = 'none';
-})
+});
