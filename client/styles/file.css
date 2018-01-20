@@ -44,7 +44,11 @@ h3 {
     justify-content: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header__content {
+    color: white;
 }
 
 .content__text h1 {
@@ -342,7 +346,7 @@ footer a {
     .header-body {
         padding-left: 3rem;
         padding-right: 3rem;
-        background-color: rgba(65, 105, 225, 0.75);
+        background-color: rgba(0, 0, 0, 0.5);
     }
     .header__content {
         display: grid;
@@ -350,8 +354,11 @@ footer a {
         grid-column-gap: 3rem;
         padding-left: 1rem;
         padding-right: 1rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
         box-shadow: 4px 5px 9px 3px rgba(0, 0, 0, 0.3);
         background-color: whitesmoke;
+        color: initial;
     }
     .content__text {
         padding: 1rem;
@@ -446,7 +453,7 @@ footer a {
 }
 
 @media screen and (min-device-width: 1000px) {
-    header{
+    header {
         font-size: 1.6rem;
     }
     .header-body,
