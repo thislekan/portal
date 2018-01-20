@@ -7,6 +7,7 @@ let footer = document.querySelector('footer');
 let navbar = document.getElementById('navbar');
 let triggers = document.querySelectorAll('.trigger');
 let background = document.querySelector('.dropdown-background');
+let learn = document.getElementById('learn-more');
 
 let viewHeight = window.innerHeight;
 let slideIndex = 0;
@@ -88,4 +89,6 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.classList.add('back-color');
     }
-})
+});
+
+learn.addEventListener('click', console.log('hello'));

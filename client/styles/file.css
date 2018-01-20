@@ -40,6 +40,7 @@ h3 {
 .header-body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-left: 1rem;
@@ -375,6 +376,26 @@ footer a {
     }
     .learn-more{
         display: block;
+    }
+    .learn-more button{
+        height: 5rem;
+        width: 30rem;
+        border: 1px solid white;
+        border-radius: 2.5rem;
+        background-color: white;
+        color: royalblue;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-size: 1.6rem;
+        font-family: 'Nuno';
+        letter-spacing: .1rem;
+        box-shadow: 4px 5px 6px 1px rgba(0, 0, 0, 0.3);
+    }
+    .learn-more button:hover{
+        color: white;
+        background-color: royalblue;
+        border: royalblue;
+        box-shadow: 0px 0px 0px 0px;
     }
     article {
         padding-left: 3rem;
