@@ -7,7 +7,6 @@ let footer = document.querySelector('footer');
 let navbar = document.getElementById('navbar');
 let triggers = document.querySelectorAll('.trigger');
 let background = document.querySelector('.dropdown-background');
-let learn = document.getElementById('learn-more');
 
 let viewHeight = window.innerHeight;
 let slideIndex = 0;
@@ -74,23 +73,11 @@ function handleLeave() {
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
 triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
-if (window.innerWidth <= 700) {
-    navbar.style.display = 'none';
-}
 
 window.addEventListener('scroll', () => {
     if (window.scrollY < (0.3 * viewHeight)) {
         navbar.classList.remove('back-color');
-        if (window.innerWidth <= 699) {
-            navbar.style.display = 'initial';
-        }else{
-            navbar.style.display = 'none';
-        }
     } else {
         navbar.classList.add('back-color');
     }
-});
-
-learn.addEventListener('click', () => {
-    window.scrollTo(0, viewHeight + (0.5 * viewHeight));
 });

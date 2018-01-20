@@ -14,7 +14,7 @@ body {
 header {
     height: 100vh;
     font-size: 1.4rem;
-    background-image: url('../images/bground.jpg');
+    background-image: url('../images/drawing.jpg');
     background-size: cover;
     background-position: center;
     transition: all ease 0.3s;
@@ -46,12 +46,8 @@ h3 {
     padding-left: 1rem;
     padding-right: 1rem;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.header__content {
     color: white;
 }
-
 .content__text h1 {
     text-align: left;
 }
@@ -64,7 +60,7 @@ h3 {
 .content__text2 {
     color: white;
     background: royalblue;
-    border: 1px solid white;
+    border: 1px solid royalblue;
     border-radius: 1rem;
     display: flex;
     align-self: center;
@@ -87,10 +83,6 @@ h3 {
 .fade {
     animation-name: fade;
     animation-duration: 5s;
-}
-.learn-more{
-    text-align: center;
-    display: none;
 }
 
 @keyframes fade {
@@ -351,6 +343,8 @@ footer a {
     .header-body {
         padding-left: 3rem;
         padding-right: 3rem;
+        color: initial;
+        background-color: initial;
     }
     .header__content {
         display: grid;
@@ -373,31 +367,6 @@ footer a {
     }
     .flash__box {
         height: 20rem;
-    }
-    .learn-more{
-        display: block;
-        margin-top: 3rem;
-        transition: all ease 0.5s;
-    }
-    .learn-more button{
-        height: 5rem;
-        width: 30rem;
-        border: 1px solid white;
-        border-radius: 2.5rem;
-        background-color: white;
-        color: royalblue;
-        font-weight: bold;
-        text-transform: capitalize;
-        font-size: 1.6rem;
-        font-family: 'Nuno';
-        letter-spacing: .1rem;
-        box-shadow: 4px 5px 6px 1px rgba(0, 0, 0, 0.3);
-    }
-    .learn-more button:hover{
-        color: white;
-        background-color: royalblue;
-        border: royalblue;
-        box-shadow: 0px 0px 0px 0px;
     }
     article {
         padding-left: 3rem;
@@ -516,6 +485,15 @@ footer a {
     .fixed-nav {
         padding-left: 3rem;
         padding-right: 3rem;
+    }
+}
+
+@media screen and (min-device-width: 1280px) {
+    .header-body,
+    footer,
+    article {
+        padding-left: 15rem;
+        padding-right: 15rem;
     }
 }
 
