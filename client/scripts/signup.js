@@ -38,7 +38,7 @@ const signUp = (userData) => {
                 location.href = '../public/login.html';
             }, 2500);
         })
-        .catch(error => alert(error));
+        .catch(error => console.log(error));
 }
 
 btn.addEventListener('click', () => {

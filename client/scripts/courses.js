@@ -122,7 +122,7 @@ fetch(`${url}confirmData`, {
             tbody.innerHTML = data.data.courseTable;
         }
     })
-    .catch(e => alert(e));
+    .catch(e => console.log(e));
 
 const updateCourses = data => {
     //id here is the dataId
@@ -139,7 +139,7 @@ const updateCourses = data => {
             loader.style.display = 'none';
             notifyBox.style.display = 'block';
         })
-        .catch(error => alert(error));
+        .catch(error => console.log(error));
 }
 
 submitBtn.addEventListener('click', () => {
@@ -174,5 +174,5 @@ logOut.addEventListener('click', () => {
             sessionStorage.clear();
             location.href = '../login.html';
         })
-        .catch(e => alert(e));
+        .catch(e => console.log(e));
 })

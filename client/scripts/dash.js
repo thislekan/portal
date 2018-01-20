@@ -42,7 +42,7 @@ fetch(`${url}users/me`, {
         displayImg.src = data.imageUrl;
         displayName.innerHTML = data.name;
     })
-    .catch(e => alert(e));
+    .catch(e => console.log(e));
 
 fetch(`${url}confirmData`, {
         method: 'GET',
@@ -61,7 +61,7 @@ fetch(`${url}confirmData`, {
             tbody.innerHTML = data.data.courseTable;
         }
     })
-    .catch(e => alert(e));
+    .catch(e => console.log(e));
 
 avatar.src = sessionStorage.getItem('imageUrl');
 fullname.innerHTML = sessionStorage.getItem('student_name');
@@ -78,5 +78,5 @@ logOut.addEventListener('click', () => {
             sessionStorage.clear();
             location.href = '../login.html';
         })
-        .catch(e => alert(e));
+        .catch(e => console.log(e));
 });

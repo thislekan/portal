@@ -73,7 +73,7 @@ const authenticateUser = route => {
                 return Promise.reject(error);
             }
         })
-        .catch(e => alert(e));
+        .catch(e => console.log(e));
 }
 
 btn.addEventListener('click', () => {
