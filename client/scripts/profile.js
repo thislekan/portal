@@ -18,6 +18,7 @@ const thumb = document.getElementById('thumb');
 const newform = document.forms.namedItem('imageUpload');
 const tbody = document.querySelector('tbody');
 const logOut = document.getElementById('logout');
+let message = notifyBox.querySelector('p');
 
 loader.style.display = 'none';
 notifyBox.style.display = 'none';
@@ -25,11 +26,11 @@ notifyBox.style.display = 'none';
 newform.action = `${url}upload/${sessionStorage.getItem('userId')}`;
 
 thumb.style.display = 'none';
-var openFile = function(event) {
+var openFile = function (event) {
     var input = event.target;
 
     var reader = new FileReader();
-    reader.onload = function() {
+    reader.onload = function () {
         var dataURL = reader.result;
         var output = document.getElementById('thumb');
         output.src = dataURL;
@@ -81,7 +82,13 @@ fetch(`${url}users/me`, {
             sessionStorage.setItem('imageUrl', 'https://res.cloudinary.com/thislekan/image/upload/v1514755522/ALC2.0 Development/user-male-black-shape.svg');
         }
     })
-    .catch(e => console.log(e));
+    .catch(e => {
+        if (e.status === 400) {
+            message.innerHTML = 'User does not exist.';
+            notifyBox.style.display = 'block';
+            notifyBox.style.backgroundColor = 'rgb(227, 13, 13)';
+        }
+    });
 
 const createStudentData = data => {
     fetch(`${url}data`, {
@@ -97,7 +104,13 @@ const createStudentData = data => {
             loader.style.display = 'none';
             notifyBox.style.display = 'block';
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            if (error.status === 400) {
+                message.innerHTML = 'User does not exist.';
+                notifyBox.style.display = 'block';
+                notifyBox.style.backgroundColor = 'rgb(227, 13, 13)';
+            }
+        });
 }
 
 avatar.src = sessionStorage.getItem('imageUrl');
@@ -105,7 +118,6 @@ fullname.innerHTML = sessionStorage.getItem('student_name');
 
 submitBtn.addEventListener('click', () => {
     if (gender.value === '' || department.value === '' || faculty.value === '' || level.value === '' || regNo.value === '') {
-        let message = notifyBox.querySelector('p');
         message.innerHTML = 'You can\'t submit a form with empty data. Please ensure all fields are filled';
         notifyBox.style.display = 'block';
         notifyBox.style.backgroundColor = 'rgb(227, 13, 13)';
@@ -140,7 +152,9 @@ logOut.addEventListener('click', () => {
             sessionStorage.clear();
             location.href = '../login.html';
         })
-        .catch(e => console.log(e));
+        .catch(e => {
+            location.href = '../login.html';
+        });
 });
 
 window.onload = () => {

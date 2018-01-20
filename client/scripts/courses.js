@@ -122,7 +122,9 @@ fetch(`${url}confirmData`, {
             tbody.innerHTML = data.data.courseTable;
         }
     })
-    .catch(e => console.log(e));
+    .catch(e => {
+        tbody.innerHTML = '';
+    });
 
 const updateCourses = data => {
     //id here is the dataId
@@ -139,7 +141,10 @@ const updateCourses = data => {
             loader.style.display = 'none';
             notifyBox.style.display = 'block';
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            message.innerHTML = 'There has been an error. Please resend data to the server';
+            notifyBox.style.display = 'block';
+        });
 }
 
 submitBtn.addEventListener('click', () => {
@@ -174,5 +179,7 @@ logOut.addEventListener('click', () => {
             sessionStorage.clear();
             location.href = '../login.html';
         })
-        .catch(e => console.log(e));
+        .catch(e => {
+            location.href = '../login.html';
+        });
 })

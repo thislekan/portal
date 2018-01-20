@@ -2,13 +2,15 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const btn = document.getElementById('log-in');
 const loader = document.getElementById('loader');
-const notifyBox = document.getElementById('notify-box');
-const cancelBtn = document.getElementById('cancel-btn');
+const alertBox = document.getElementById('alert-box');
+const section = document.querySelector('section');
 // const url = 'http://localhost:3000/';
 const url = 'https://pacific-stream-32452.herokuapp.com/';
+let message = alertBox.querySelector('p');
 
 loader.style.display = 'none';
-notifyBox.style.display = 'none';
+alertBox.style.display = 'none';
+section.classList.add('shift');
 
 function hanldeResponse(res) {
     return res.json()
@@ -39,16 +41,19 @@ const login = (route, userData) => {
             } else {
                 let error = Object.assign({}, res, {
                     status: res.status,
-                    statusText: 'incorrect email or password'
+                    statusText: 'Incorrect email or password'
                 });
-                let message = notifyBox.querySelector('p');
-                message.innerHTML = error.statusText;
-                loader.style.display = 'none';
-                notifyBox.style.display = 'block';
                 return Promise.reject(error);
             }
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            if (error.status === 400) {
+                message.innerHTML = error.statusText + '. Please try again.';
+                loader.style.display = 'none';
+                section.classList.remove('shift');
+                alertBox.style.display = 'flex';
+            }
+        });
 
 }
 
@@ -73,24 +78,34 @@ const authenticateUser = route => {
                 return Promise.reject(error);
             }
         })
-        .catch(e => console.log(e));
+        .catch(e => {
+            if (error.status === 400) {
+                message.innerHTML = 'User does not exist. Please sign up to log in';
+                section.classList.remove('shift');
+                alertBox.style.display = 'flex';
+                loader.style.display = 'none';
+            }else{
+                message.innerHTML = 'Please check for connection errors.';
+                section.classList.remove('shift');
+                alertBox.style.display = 'flex';
+                loader.style.display = 'none';
+            }
+        });
 }
 
 btn.addEventListener('click', () => {
-    let message = notifyBox.querySelector('p');
     let passwordLength = password.value;
     if (email.value === '' || password.value === '') {
-        message.innerHTML = 'Can\'t Log in with fields empty. Please fill in all fields.';
-        notifyBox.style.display = 'flex';
+        message.innerHTML = 'You can\'t sign up with empty data. Please check the form for empty fields.';
+        section.classList.remove('shift');
+        alertBox.style.display = 'flex';
     } else if (passwordLength.length < 6) {
-        message.innerHTML = 'Password needs at least 6 characters to be valid.'
-        notifyBox.style.display = 'flex';
+        message.innerHTML = 'Password needs at least 6 characters to be valid.';
+        section.classList.remove('shift');
+        alertBox.style.display = 'flex';
     } else {
         login('users/login', { email: email.value, password: password.value });
         loader.style.display = 'flex';
     }
 });
 
-cancelBtn.addEventListener('click', () => {
-    notifyBox.style.display = 'none';
-})

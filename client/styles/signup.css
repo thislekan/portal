@@ -41,10 +41,23 @@ img {
     height: 6rem;
 }
 
+#alert-box p {
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #de7171;
+    min-height: 6rem;
+    width: 100%;
+    padding: 1rem;
+}
+
 section {
     padding-right: 1rem;
     padding-left: 1rem;
-    margin-top: 10rem;
+}
+
+.shift {
+    padding-top: 10rem;
 }
 
 .form-body {
@@ -174,50 +187,16 @@ p a {
     }
 }
 
-#notify-box {
-    position: absolute;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.87);
-    min-height: 20rem;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 2rem;
-    max-width: 100%;
-    z-index: 2;
-}
-
-#notify-box p {
-    height: unset;
-    height: unset;
-    background: unset;
-    border-radius: unset;
-    display: initial;
-}
-
-#cancel-btn {
-    margin-top: 3rem;
-    height: 3.5rem;
-    background: royalblue;
-    border: 1px solid royalblue;
-    color: white;
-    font-weight: bold;
-    width: 15rem;
-    box-shadow: 3px 4px 4px 0px rgba(0, 0, 0, 0.2);
-    font-family: 'Nunito';
-    outline: none;
-    cursor: pointer;
-}
-
 @media screen and (min-device-width: 600px) {
     article {
         padding-left: 30%;
         padding-right: 30%;
         padding-top: 5%;
         padding-bottom: 5%;
+    }
+    #alert-box p {
+        margin-left: 0;
+        margin-right: 0;
     }
     section {
         padding: 0;

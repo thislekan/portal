@@ -14,6 +14,7 @@ const displayImg = document.getElementById('user-img');
 const logOut = document.getElementById('logout');
 const notifyBox = document.getElementById('notify-box');
 const notifBtn = notifyBox.querySelector('button');
+let message = notifyBox.querySelector('p');
 // const url = 'http://localhost:3000/';
 const url = 'https://pacific-stream-32452.herokuapp.com/';
 
@@ -44,7 +45,10 @@ fetch(`${url}users/me`, {
         displayImg.src = data.imageUrl;
         displayName.innerHTML = data.name;
     })
-    .catch(e => console.log(e));
+    .catch(e => {
+        message.innerHTML = 'User does not exist';
+        notifyBox.style.display = 'flex';
+    });
 
 fetch(`${url}confirmData`, {
         method: 'GET',
@@ -64,9 +68,8 @@ fetch(`${url}confirmData`, {
         }
     })
     .catch(e => {
-        let message = notifyBox.querySelector('p');
         message.innerHTML = 'You haven\'t completed your profile. You\'ll be redirected in a second.';
-        notifyBox.style.display = 'block';
+        notifyBox.style.display = 'flex';
     });
 
 notifBtn.addEventListener('click', () => {
@@ -91,5 +94,7 @@ logOut.addEventListener('click', () => {
             sessionStorage.clear();
             location.href = '../login.html';
         })
-        .catch(e => console.log(e));
+        .catch(e => {
+            location.href = '../login.html';
+        });
 });
