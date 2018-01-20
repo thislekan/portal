@@ -92,5 +92,5 @@ window.addEventListener('scroll', () => {
 });
 
 learn.addEventListener('click', () => {
-    window.scrollTo(viewHeight + (0.5 * viewHeight));
+    window.scrollTo(0, viewHeight + (0.5 * viewHeight));
 });
