@@ -73,10 +73,12 @@ function handleLeave() {
 
 triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter));
 triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave));
+navbar.style.display = 'none';
 
 window.addEventListener('scroll', () => {
     if (window.innerWidth >= 700) {
         if (window.scrollY < (0.3 * viewHeight)) {
+            navbar.style.display = 'initial';
             navbar.classList.remove('back-color');
         } else {
             navbar.classList.add('back-color');

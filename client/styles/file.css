@@ -13,6 +13,9 @@ body {
 
 header {
     height: 100vh;
+    background-image: url('../images/bground.jpg');
+    background-size: cover;
+    background-position: center;
     transition: all ease 0.3s;
 }
 
@@ -40,6 +43,7 @@ h3 {
     justify-content: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .content__text h1 {
@@ -342,6 +346,9 @@ footer a {
         display: grid;
         grid-template-columns: auto 40%;
         grid-column-gap: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        box-shadow: 4px 5px 9px 3px rgba(0, 0, 0, 0.3);
     }
     .content__text {
         padding: 1rem;
