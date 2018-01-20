@@ -44,7 +44,7 @@ fetch(`${url}users/me`, {
     })
     .catch(e => console.log(e));
 
-fetch(`${url}confirmData`, {
+fetch(`${url}confirmUserData`, {
         method: 'GET',
         headers: {
             'x-auth': sessionStorage.getItem('token'),

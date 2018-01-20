@@ -108,7 +108,7 @@ function hanldeResponse(res) {
 }
 
 
-fetch(`${url}confirmData`, {
+fetch(`${url}confirmUserData`, {
         method: 'GET',
         headers: {
             'x-auth': sessionStorage.getItem('token'),
