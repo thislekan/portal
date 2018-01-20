@@ -12,6 +12,8 @@ const displayDept = document.getElementById('user-dept');
 const displayLevel = document.getElementById('user-level');
 const displayImg = document.getElementById('user-img');
 const logOut = document.getElementById('logout');
+const notifyBox = document.getElementById('notify-box');
+const notifBtn = notifyBox.querySelector('button');
 // const url = 'http://localhost:3000/';
 const url = 'https://pacific-stream-32452.herokuapp.com/';
 
@@ -61,7 +63,18 @@ fetch(`${url}confirmData`, {
             tbody.innerHTML = data.data.courseTable;
         }
     })
-    .catch(e => console.log(e));
+    .catch(e => {
+        let message = notifyBox.querySelector('p');
+        message.innerHTML = 'You haven\'t completed your profile. You\'ll be redirected in a second.';
+        notifyBox.style.display = 'block';
+    });
+
+notifBtn.addEventListener('click', () => {
+    notifyBox.style.display = 'none';
+    setTimeout(() => {
+        location.href = '../private/profile.html';
+    }, 1500);
+});
 
 avatar.src = sessionStorage.getItem('imageUrl');
 fullname.innerHTML = sessionStorage.getItem('student_name');
