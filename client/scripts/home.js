@@ -32,13 +32,11 @@ navBtn.addEventListener('click', () => {
         header.classList.remove('shift');
         article.classList.remove('shift');
         footer.classList.remove('shift');
-        navBtn.style.color = 'initial';
     } else {
         menu.style.left = '15%';
         header.classList.add('shift');
         article.classList.add('shift');
         footer.classList.add('shift');
-        navBtn.style.color = 'white';
     }
 });
 
@@ -77,7 +75,9 @@ triggers.forEach(trigger => trigger.addEventListener('mouseleave', handleLeave))
 window.addEventListener('scroll', () => {
     if (window.scrollY < (0.3 * viewHeight)) {
         navbar.classList.remove('back-color');
+        navBtn.style.color = 'white'
     } else {
         navbar.classList.add('back-color');
+        navBtn.style.color = '#3b3b3b';
     }
 });
