@@ -80,8 +80,10 @@ if (window.innerWidth <= 700) {
 window.addEventListener('scroll', () => {
     if (window.scrollY < (0.3 * viewHeight)) {
         navbar.classList.remove('back-color');
-        if (window.innerWidth <= 700) {
+        if (window.innerWidth <= 699) {
             navbar.style.display = 'initial';
+        }else{
+            navbar.style.display = 'none';
         }
     } else {
         navbar.classList.add('back-color');

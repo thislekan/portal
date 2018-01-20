@@ -87,6 +87,10 @@ h3 {
     animation-name: fade;
     animation-duration: 5s;
 }
+.learn-more{
+    text-align: center;
+    display: none;
+}
 
 @keyframes fade {
     from {
@@ -246,7 +250,6 @@ footer a {
 .back-color {
     background-color: rgba(0, 0, 0, 0.65);
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
-    color: white;
 }
 
 .dropdown-background {
@@ -297,6 +300,7 @@ footer a {
         height: unset;
         width: unset;
         background-color: unset;
+        color: white;
     }
     .fixed-nav>ul {
         height: unset;
@@ -346,7 +350,6 @@ footer a {
     .header-body {
         padding-left: 3rem;
         padding-right: 3rem;
-        background-color: rgba(0, 0, 0, 0.5);
     }
     .header__content {
         display: grid;
@@ -369,6 +372,9 @@ footer a {
     }
     .flash__box {
         height: 20rem;
+    }
+    .learn-more{
+        display: block;
     }
     article {
         padding-left: 3rem;
