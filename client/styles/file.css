@@ -14,7 +14,7 @@ body {
 header {
     height: 100vh;
     font-size: 1.4rem;
-    background-image: url('../images/drawing.jpg');
+    background-image: url('../images/bground.jpg');
     background-size: cover;
     background-position: center;
     transition: all ease 0.3s;
