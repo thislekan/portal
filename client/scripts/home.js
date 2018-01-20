@@ -91,4 +91,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-learn.addEventListener('click', console.log('hello'));
+learn.addEventListener('click', () => {
+    window.scrollTo(viewHeight + (0.5 * viewHeight));
+});

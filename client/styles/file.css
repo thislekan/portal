@@ -376,6 +376,8 @@ footer a {
     }
     .learn-more{
         display: block;
+        margin-top: 3rem;
+        transition: all ease 0.5s;
     }
     .learn-more button{
         height: 5rem;
