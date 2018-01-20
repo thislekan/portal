@@ -13,6 +13,7 @@ body {
 
 header {
     height: 100vh;
+    font-size: 1.4rem;
     background-image: url('../images/bground.jpg');
     background-size: cover;
     background-position: center;
@@ -341,6 +342,7 @@ footer a {
     .header-body {
         padding-left: 3rem;
         padding-right: 3rem;
+        background-color: rgba(65, 105, 225, 0.75);
     }
     .header__content {
         display: grid;
@@ -349,6 +351,7 @@ footer a {
         padding-left: 1rem;
         padding-right: 1rem;
         box-shadow: 4px 5px 9px 3px rgba(0, 0, 0, 0.3);
+        background-color: whitesmoke;
     }
     .content__text {
         padding: 1rem;
@@ -443,6 +446,9 @@ footer a {
 }
 
 @media screen and (min-device-width: 1000px) {
+    header{
+        font-size: 1.6rem;
+    }
     .header-body,
     footer,
     article {
