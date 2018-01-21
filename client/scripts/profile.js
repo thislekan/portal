@@ -157,6 +157,13 @@ logOut.addEventListener('click', () => {
         });
 });
 
+imgBtn.addEventListener('click', e => {
+    if (!image.value) {
+        e.preventDefault();
+        alert('Please select an image');
+    }
+});
+
 window.onload = () => {
     if (avatar.src === `${url}public/private/null`) {
         location.reload();
