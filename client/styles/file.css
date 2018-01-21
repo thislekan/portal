@@ -231,7 +231,13 @@ footer {
     padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    text-align: center;
     transition: all ease 0.3s;
+}
+
+footer p{
+    color: #cd99dd;
+    font-weight: bold;
 }
 
 footer ul {
@@ -381,6 +387,7 @@ footer a {
         justify-content: space-between;
         padding-top: .5rem;
         padding-bottom: .5rem;
+        text-align: unset;
     }
     footer ul {
         padding: 0;
